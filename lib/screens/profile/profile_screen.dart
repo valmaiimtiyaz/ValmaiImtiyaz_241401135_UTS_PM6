@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class LeaderboardScreen extends StatelessWidget {
-  const LeaderboardScreen({Key? key}) : super(key: key);
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text('Ini adalah Halaman Papan Peringkat')),
+      body: Center(child: Text('Ini adalah Halaman Profil')),
     );
   }
 }
