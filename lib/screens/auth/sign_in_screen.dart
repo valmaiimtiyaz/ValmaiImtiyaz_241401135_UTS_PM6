@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/constants/app_colors.dart';
 import '../../widgets/custom_textfield.dart';
 import '../../widgets/custom_button.dart';
+import '../../core/routes/app_router.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -101,7 +103,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 CustomButton(
                   text: 'Masuk',
                   onPressed: () {
-                    //TODO: implement login
+                    context.go(AppRoutes.home);
                   },
                 ),
                 const SizedBox(height: 24),
@@ -112,7 +114,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Text('Belum punya akun? ', style: textTheme.bodyMedium),
                     GestureDetector(
                       onTap: () {
-                        //TODO: implement navigation sign up screen
+                        context.push(AppRoutes.signUp);
                       },
                       child: const Text(
                         'Buat akun',
